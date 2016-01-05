@@ -1,0 +1,502 @@
+{% extends "bootstrap/base.html" %}
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+{% block head %}
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Web dev">
+  <meta name="author" content="Thinknobs">
+
+
+  <title>{% block title%} Homepage Thinknobs {% endblock %}</title>
+
+{% block styles %}
+{{super()}}
+
+<!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+  <link rel = 'stylesheet' href="{{url_for('static', filename = 'css/bootstrap.min.css')}}"/>
+
+  <!-- Custom CSS -->
+  <link rel = 'stylesheet' href="{{url_for('static', filename = 'css/freelancer.css')}}" />
+  <!-- Custom Fonts -->
+  
+  <link rel = 'stylesheet' href="{{url_for('static', filename = 'font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css" />
+  <link rel = 'stylesheet' href="{{url_for('static', filename = 'Walkway/style.css')}}" rel="stylesheet" type="text/css" />
+
+
+ 
+{% endblock %}
+{% endblock %}
+</head>
+
+<body id = "page-top" class ="index">
+{% block body %}
+{% block navbar%}
+  <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header page-scroll">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <a  class="navbar-brand" href="#">T h i n k N o b s 
+              </a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                  <li class="hidden">
+                      <a href="#page-top"></a>
+                  </li>
+                  <li class="page-scroll">
+                      <a href="#portfolio">Our Services</a>
+                  </li>
+                  <li class="page-scroll">
+                      <a href="#about">About</a>
+                  </li>
+                  <li class="page-scroll">
+                      <a href="#contact">Contact</a>
+                  </li>
+              </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+  </nav>
+
+  {% endblock %}
+
+  <header>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <img class="img-responsive" src = "{{url_for('static', filename = 'img/profile.png')}}" alt=''>
+                <div class="intro-text">
+                    <span class="name">Application Development and Design</span>
+                    <hr class="star-light">
+                    <span class="skills">Web Application Development - Graphic Artist - User Experience Designer</span>
+                </div> 
+            </div>
+        </div>
+    </div>
+  </header>
+
+  <section id="portfolio">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>Our services</h2>
+                <hr class="star-primary">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 portfolio-item">
+                <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="{{url_for('static', filename ='img/portfolio/laptop_content.png')}}" class="img-responsive" alt="">
+                </a>
+            </div>
+            <div class="col-sm-4 portfolio-item">
+                <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="{{url_for('static', filename = 'img/portfolio/cloud.png')}}" class="img-responsive" alt="">
+                </a>
+            </div>
+            <div class="col-sm-4 portfolio-item">
+                <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="{{url_for('static', filename ='img/portfolio/mobile.png')}}" class="img-responsive" alt="">
+                </a>
+            </div>
+            <div class="col-sm-4 portfolio-item">
+                <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="{{url_for('static', filename = 'img/portfolio/configurations.png')}}" class="img-responsive" alt="">
+                </a>
+            </div>
+            <div class="col-sm-4 portfolio-item">
+                <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="{{url_for('static', filename ='img/portfolio/safe.png')}}" class="img-responsive" alt="">
+                </a>
+            </div>
+            <div class="col-sm-4 portfolio-item">
+                <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="{{url_for('static', filename = 'img/portfolio/video2.png')}}" class="img-responsive" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+  </section>
+
+      <!-- About Section -->
+  <section class="success" id="about">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12 text-center">
+                  <h2>About</h2>
+                  <hr class="star-light">
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-lg-4 col-lg-offset-2">
+                  <p>ThinkNobs I.T Consulting and Management is a that company specialising in:
+                    <ul>
+                      <li>Web Application Development</li>
+                      <li>Python/HTML/CSS</li>
+                      <li>Web Design</li>
+                      <li>Wordpress</li>
+                      <li>E-Commerce</li>
+                      <li>Professional Photography</li>
+                      <li>Branding & Logo Design</li>
+                    </ul>
+                  </p>
+              </div>
+              <div class="col-lg-4">
+                  <p>For medium to large companies,organisations seeking virtual presence or web enthusiasts requiring video or web blog development, with our relevant development skills and uncomprimised values, we assure provision of cutting-edge and competitive solutions to broaden marketshare assist and attend your every need.
+                  </p>
+              </div>
+
+          </div>
+      </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>Contact Us</h2>
+                <hr class="star-primary">
+            </div>
+       </div>
+    </div>
+  </section>
+
+
+{% block content %} 
+<div class= 'container'>
+  <div class="col-lg-8 col-lg-offset-2">
+   
+  {% block page_content %}
+  <div class="container">
+    {% for message in get_flashed_messages() %}
+    <div class="alert alert-warning">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        {{ message }}
+    </div>
+  </div>
+    {% endfor %}
+
+  {% endblock %} 
+    
+  </div>
+</div>
+{% endblock %}
+
+
+<footer class="text-center">
+    <div class="footer-above">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col col-md-4">
+                    <h3>Contact Details</h3>
+                    <p>Phone: 0815955458<br>E-mail: contactus@thinknobs.co.za</p>
+                </div>
+                <div class="footer-col col-md-4">
+                    <h3>Around the Web</h3>
+                    <ul class="list-inline">
+                        <li>
+                            <a href="https://za.linkedin.com/in/bhomela-jordan-924277111" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://dribbble.com/ThinkNobs" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col col-md-4">
+                    <h3>About ThinkNobs</h3>
+                    <p><b><a href = 'thinknobs.co.za'>ThinkNobs</a></b> is a company specializing in connecting businesses to the world through the integration and infiltration of information systems</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-below">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    Copyright &copy; ThinkNobs 2016
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="scroll-top page-scroll visible-xs visible-sm">
+    <a class="btn btn-primary" href="#">
+        <i class="fa fa-chevron-up"></i>
+    </a>
+</div>
+
+<!-- Portfolio Modals -->
+<div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="modal-body">
+                        <h2>Web Application and Design</h2>
+                        <hr class="star-primary">
+                        <img src="{{url_for('static', filename = 'img/portfolio/laptop_content.png')}}" class="img-responsive img-centered" alt="">
+                        <p>Present your clientele simple, clean and interactive websites design and a application user interface with robust functionality. Full customization provides a direct focus on a desired target, assisting users follow through with ease.</p>
+                        <ul class="list-inline item-details">
+                            <li>Contact:
+                                <strong><a href="#contact" data-dismiss="modal">Contact Us</a>
+                                </strong>
+                            </li>
+                            <li>Service:
+                                <strong><a href="#contact">Web Application Development</a>
+                                </strong>
+                            </li>
+                        </ul>
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="modal-body">
+                        <h2>Web/Domain Hosting</h2>
+                        <hr class="star-primary">
+                        <img src="{{url_for('static', filename= 'img/portfolio/cloud.png')}}" class="img-responsive img-centered" alt="">
+                        <p>Optimal E-mail and Website hosting with 24-hour access. Dedicated servers ensures that your domain has the required performance capabilities to suit your every need.</p>
+                        <ul class="list-inline item-details">
+                            <li>Contact:
+                                <strong><a data-dismiss="modal" href="#contact" >Contact Us</a>
+                                </strong>
+                            </li>
+                            <li>Service:
+                                <strong><a href="#contact">Web/Domain Hosting</a>
+                                </strong>
+                            </li>
+                        </ul>
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="modal-body">
+                        <h2>Mobile Application Development</h2>
+                        <hr class="star-primary">
+                        <img src="{{url_for('static', filename = 'img/portfolio/mobile.png')}}" class="img-responsive img-centered" alt="">
+                        <p>Ensuring broader connectivity of your clientele with your enterprise is almost always high-speed,reliable and persistent. Provide a unique user experience and data in demand means applications can work whenever and wherever they are accessed. Applications created from scratch ensures that security is integrated and behind-the-wall data is secure.</p>
+                        <ul class="list-inline item-details">
+                            <li>Contact:
+                                <strong><a href="#contact" data-dismiss="modal">Contact Us</a>
+                                </strong>
+                            </li>
+                            <li>Service:
+                                <strong><a href="#contact">Mobile Application Development</a>
+                                </strong>
+                            </li>
+                        </ul>
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="modal-body">
+                        <h2>System Support and Reconfiguration</h2>
+                        <hr class="star-primary">
+                        <img src="{{url_for('static', filename = 'img/portfolio/configurations.png')}}" class="img-responsive img-centered" alt="">
+                        <p>This service ensures reconfiguration and support of existing web applications,general websites,information systems and cloud services. </p>
+                        <ul class="list-inline item-details">
+                            <li>Contact:
+                                <strong><a href="#contact" data-dismiss="modal">Contact Us</a>
+                                </strong>
+                            </li>
+                            <li>Service:
+                                <strong><a href="#contact">Systems Reconfiguration</a>
+                                </strong>
+                            </li>
+                        </ul>
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="modal-body">
+                        <h2>File Storage Server</h2>
+                        <hr class="star-primary">
+                        <img src="{{url_for('static', filename='img/portfolio/safe.png')}}" class="img-responsive img-centered" alt="">
+                        <p>Mass storage of data and information available 24 hours. Server software allows encryption of data files and optimal security enhancements. Fast processors and regularly upgraded systems allows fast and reliable accessibilty.  </p>
+                        <ul class="list-inline item-details">
+                            <li>Contact:
+                                <strong><a href="#contact" data-dismiss="modal">Contact Us</a>
+                                </strong>
+                            </li>
+                            <li>Service:
+                                <strong><a href="#contact">File Storage Server</a>
+                                </strong>
+                            </li>
+                        </ul>
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="modal-body">
+                        <h2>Professional Photography</h2>
+                        <hr class="star-primary">
+                        <img src="{{url_for('static', filename ='img/portfolio/video2.png')}}" class="img-responsive img-centered" alt="">
+                        <p><i>When people look at my pictures I want them to feel the way they do when they want to read a line of a poem twice<br> -Robert Frank</i> <br>Capturing images for events such as: Weddings, Anniversaries, Matric Dances and Birthday Celebrations.</p>
+                        <ul class="list-inline item-details">
+                            <li>Contact:
+                                <strong><a href="#contact" data-dismiss="modal" >Contact Us</a>
+                                </strong>
+                            </li>
+                            <li>Service:
+                                <strong><a href="#contact">Professional Photography</a>
+                                </strong>
+                            </li>
+                        </ul>
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>   
+
+
+{% block scripts %}
+
+{{super()}}
+<!-- jQuery -->
+<script src=" {{ url_for('static', filename = 'js/jquery.js')}}"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src=" {{ url_for('static', filename = 'js/bootstrap.min.js')}}"></script>
+
+<!-- Plugin JavaScript -->
+
+<script src="{{ url_for('static', filename = 'js/classie.js') }}"></script>
+<script src="{{ url_for('static', filename = 'js/cbpAnimatedHeader.js') }}"></script>
+
+
+
+<!-- Contact Form JavaScript -->
+<script src="{{ url_for('static', filename = 'js/jqBootstrapValidation.js') }}"></script>
+
+
+<!-- Custom Theme JavaScript -->
+<script src="{{ url_for('static', filename = 'js/freelancer.js') }}"></script>
+
+{{ moment.include_moment() }} 
+
+{% endblock %}
+{% endblock %}
+</body>
+
+</html>

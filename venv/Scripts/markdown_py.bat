@@ -1,0 +1,1 @@
+@"c:\Users\Bhomela\Documents\ThinkNobs\venv\Scripts\python.exe" "c:\Users\Bhomela\Documents\ThinkNobs\venv\Scripts\markdown_py" %*

@@ -1,0 +1,6 @@
+@font-face {
+  font-family: 'Walkway_Black';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Walkway_Black'), url(font-awesome/Walkway/Walkway_Black.ttf) format('ttf');
+}
