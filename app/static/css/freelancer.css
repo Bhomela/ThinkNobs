@@ -169,7 +169,7 @@ header .intro-text .skills {
 }
 
 .navbar .navbar-nav li a:focus {
-    outline: 0;
+    outline: 0; 
 }
 
 .navbar-default,
