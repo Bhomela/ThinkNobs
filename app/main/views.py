@@ -19,7 +19,7 @@ def main():
         flash('Thank You. Message Sent.')
         session['known'] = False
         # add personal email once configured
-        emails = [user.email,'bhomelaj@gmail.com']
+        emails = [user.email,'bhomelaj@gmail.com','contactus@thinknobs.com']
         for email in emails:
             send_email(email, 'New User','mail/template', user=user, name = user.name)
         form.name.data = ''

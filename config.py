@@ -7,11 +7,11 @@ class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'hard to guess string'
     SQLALCHEMY_COMMIT_ON_TEARDOWN = True
     MAIL_SERVER = 'gator4183.hostgator.com'
-    MAIL_PORT = 465
+    MAIL_PORT = 25
     MAIL_USE_TLS = True
     MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
-    THINKNOBS_MAIL_SUBJECT_PREFIX = 'Thinknobs'
+    THINKNOBS_MAIL_SUBJECT_PREFIX = 'ThinkNobs'
     THINKNOBS_MAIL_SENDER = 'Thinknobs Admin <contactus@thinknobs.com>'
     THINKNOBS_ADMIN = os.environ.get('THINKNOBS_ADMIN')
 
